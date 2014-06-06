@@ -74,7 +74,7 @@ OBJDIR = .
 SHARED = 
 
 #Library directory
-LIBS_DIR = ../../libs
+LIBS_DIR = ../libs
 
 
 # List C source files here. (C dependencies are automatically generated.)
@@ -393,15 +393,6 @@ GENDEPFLAGS = -MMD -MP -MF .dep/$(@F).d
 ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
 ALL_CPPFLAGS = -mmcu=$(MCU) -I. -x c++ $(CPPFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
-
-
-#export MCU
-#export F_CPU
-#export OPT
-#export EVENT_FREQ
-#export MAX_EVENT_RECORDS
-#export TWI_SPEED BAUD
-#include ../../libs/makefile
 
 
 # Default target.
